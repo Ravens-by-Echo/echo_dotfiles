@@ -1,0 +1,100 @@
+* {
+    font-family: "EnvyCodeR Nerd Font Propo";
+    font-size: 14px;
+}
+
+window {
+    margin: 0px;
+    border: 10px solid #1e1e2e;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+#input {
+    padding: 4px;
+    margin: 4px;
+    padding-left: 20px;
+    border: 2px solid rgba(250, 1, 121, 0.855);
+    color: #cdd6f4;
+    font-weight: bold;
+    background-color: #1e1e2e;
+    /* background: ; */
+    outline: none;
+    border-radius: 20px;
+    margin: 10px 13px;
+    margin-bottom: 2px;
+}
+
+#input:focus {
+    border: 0px solid #1e1e2e;
+    margin-bottom: 0px;
+}
+
+#inner-box {
+    margin: 4px;
+    border: 10px solid #1e1e2e;
+    color: #cdd6f4;
+    font-weight: bold;
+    background-color: #242446;
+    /* background-color: red; */
+    border-radius: 20px;
+}
+
+#outer-box {
+    margin: 0px;
+    border: 3px solid rgba(250, 1, 121, 0.855);
+    border-radius: 20px;
+    background-color: #1e1e2e;
+
+    /* Your image */
+    background-image:
+        url("/home/ravens-by-echo/.config/wofi/skull1.png"),
+        url("/home/ravens-by-echo/.config/wofi/skull1_mirror.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 95%, left 5%;
+    background-size: 140px auto, 140px auto;
+
+    border-radius: 12px;
+    padding-left: 140px;
+    /* makes room for image */
+}
+
+#scroll {
+    margin-top: 5px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+#img {
+    margin-right: 10px;
+}
+
+#img:selected {
+    background-color: rgba(250, 1, 121, 0.855);
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+#text:selected {
+    color: #cdd6f4;
+    color: black;
+    margin: 0px 0px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(250, 1, 121, 0.855);
+}
+
+#entry {
+    margin: 0px 0px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    margin: 0px 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(250, 1, 121, 0.855);
+}

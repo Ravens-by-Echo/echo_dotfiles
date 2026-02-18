@@ -1,0 +1,89 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "EnvyCodeR Nerd Font Propo";
+    font-size: 12px;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    /*background: rgba(245, 11, 124, 0.298);*/
+    background: rgba(245, 11, 124, 0.094);
+    color: white;
+}
+
+tooltip {
+    background: rgba(43, 48, 59, 0.5);
+    border: 1px solid rgba(100, 114, 125, 0.5);
+}
+
+tooltip label {
+    color: white;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.active {
+    min-width: 50px;
+    background: rgba(250, 1, 121, 0.855);
+    font-weight: bolder;
+    border-color: black;
+    border-radius: 100px;
+}
+
+#mode,
+#clock,
+#battery,
+#network {
+    padding: 0 10px;
+    margin: 0 5px;
+    background: rgba(250, 1, 121, 0.855);
+    border-radius: 100px;
+    border-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4),
+        0 1px 3px rgba(0, 0, 0, 0.2),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery {
+    font-weight: bolder;
+}
+
+#battery.charging {
+    background: rgba(250, 1, 121, 0.855);
+    border-radius: 100px;
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-power {
+    padding-left: 5px;
+    background: rgba(250, 1, 121, 0.855);
+    border-radius: 100px;
+    border-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4),
+        0 1px 3px rgba(0, 0, 0, 0.2),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+}

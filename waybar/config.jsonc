@@ -1,0 +1,134 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "hyprland/mode",
+        "clock"
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+        "sway/window"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery",
+        "custom/power"
+    ],
+    "sway/window": {
+        "max-length": 50
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰚥",
+        "update-interval": 2,
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "custom/power": {
+        "format": "⏻ ",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "/usr/share/waybar/custom_modules/power_menu.xml", // Menu file in resources folder
+        "menu-actions": {
+            "shutdown": "shutdown now",
+            "reboot": "reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate"
+        }
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-muted": " {format_source}" ,
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ],
+        "on-click": "~/.config/waybar/scripts/audio-select.sh",
+        "tooltip": false
+    },
+    "network": {
+        "interface": "wlo1",
+        "format": "{ifname}",
+        "format-wifi": "({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "󰪮", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "~/.config/waybar/scripts/wifi-select.sh",
+        "max-length": 50
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}: {name}",
+        "all-outputs": false,
+        "sort-by-number": true,
+        "format-icons": {
+            "1": "",
+            "2": "󰨞",
+            "3": "󰪮",
+            "4": "",
+            "5": "󱜙",
+			"11": "",
+            "12": "󰅬",
+            "13": "",
+            "14": "",
+            "15": "󱙝",
+			"21": "󱄲",
+            "22": "",
+            "23": "",
+            "24": "",
+            "25": ""
+        },
+        "persistent-workspaces": {
+            "HDMI-A-1": [
+                21,
+                22,
+                23,
+                24,
+                25
+            ],
+            "eDP-1": [
+                11,
+                12,
+                13,
+                14,
+                15
+            ],
+            "DP-3": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        }
+    }
+}
