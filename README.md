@@ -8,4 +8,4 @@
 - Hyprland
 - Wofi
 - Hyprpaper
-- [Help Tool]()
+- [Help Tool](https://github.com/Ravens-by-Echo/hypr_help_menu)
