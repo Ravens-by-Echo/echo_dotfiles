@@ -1,2 +1,11 @@
-# echo_dotfiles
-Ravens by Echo linux dot files
+# Ravens by Echo Dotfiles
+
+## Dependencies
+
+- Kitty
+- Dunst
+- Waybar
+- Hyprland
+- Wofi
+- Hyprpaper
+- [Help Tool]()
